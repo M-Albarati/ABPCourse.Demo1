@@ -11,5 +11,6 @@ namespace ABPCourse.Demo1.Products
         Task<ProductDto> GetProductAsync(int id);
         Task<bool> DeleteProductAsync(int id);
         Task<PagedResultDto<ProductDto>> GetListAsync(GetProductListDto input);
+        Task<bool> TestComplexPermissions();
     }
 }
