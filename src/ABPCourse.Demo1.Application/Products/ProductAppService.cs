@@ -1,8 +1,10 @@
 ﻿using ABPCourse.Demo1.Bases;
+using ABPCourse.Demo1.Localization;
 using ABPCourse.Demo1.Permissions;
 using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,12 +21,15 @@ namespace ABPCourse.Demo1.Products
     {
         #region fields
         private readonly IRepository<Product, int> productRepository;
+        private readonly IStringLocalizerFactory stringLocalizer;
         #endregion
 
         #region ctor
-        public ProductAppService(IRepository<Product, int> productRepository)
+        public ProductAppService(IRepository<Product, int> productRepository,
+                                IStringLocalizerFactory stringLocalizer )
         {
             this.productRepository = productRepository;
+            this.stringLocalizer = stringLocalizer;
         }
         #endregion
 
@@ -33,7 +38,7 @@ namespace ABPCourse.Demo1.Products
         public async Task<ProductDto> CreateProductAsync(CreateUpdateProductDto input)
         {
             //Validation
-            var ValidateResult = new CreateUpdateProductValidation().Validate(input);
+            var ValidateResult = new CreateUpdateProductValidation(stringLocalizer).Validate(input);
             if (!ValidateResult.IsValid)
             {
                 var exception = GetValidationException(ValidateResult);
@@ -110,7 +115,7 @@ namespace ABPCourse.Demo1.Products
         public async Task<ProductDto> UpdateProductAsync(CreateUpdateProductDto input)
         {
             //Validation
-            var ValidateResult = new CreateUpdateProductValidation().Validate(input);
+            var ValidateResult = new CreateUpdateProductValidation(stringLocalizer).Validate(input);
             if (!ValidateResult.IsValid)
             {
                 var exception = GetValidationException(ValidateResult);

@@ -5,6 +5,11 @@
     "Permission:Products:CreateEditProduct": "Create / Edit Product",
     "Permission:Products:DeleteProduct": "Delete Product",
     "Permission:Products:GetProduct": "Get Product",
-    "Permission:Products:ListProduct": "List Products"
+    "Permission:Products:ListProduct": "List Products",
+    "Products:InvalidProductNameAr": "Product Name In Arabic Is Invalid",
+    "Products:InvalidProductNameEn": "Product Name In English Is Invalid",
+    "Products:InvalidProductDescriptionAr": "Product Description In Arabic Is Invalid",
+    "Products:InvalidProductDescriptionEn": "Product Description In English Is Invalid",
+    "Products:InvalidProductCategory": "Product Category Is Invalid"
   }
 }

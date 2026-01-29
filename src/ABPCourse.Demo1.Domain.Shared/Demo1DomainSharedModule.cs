@@ -49,7 +49,7 @@ public class Demo1DomainSharedModule : AbpModule
             
             //تسجيل ملف الترجمة الخاص بالمنتجات 
             options.Resources
-                .Add<ProductsResource>("en")
+                .Add<ProductsResource>("ar")
                 .AddBaseTypes(typeof(AbpValidationResource))
                 .AddVirtualJson("/Localization/Products");
 

@@ -5,6 +5,12 @@
     "Permission:Products:CreateEditProduct": "اضافة وتعديل منتج",
     "Permission:Products:DeleteProduct": "حذف منتج",
     "Permission:Products:GetProduct": "عرض منتج",
-    "Permission:Products:ListProduct": "عرض المنتجات"
+    "Permission:Products:ListProduct": "عرض المنتجات",
+    "Products:InvalidProductNameAr": "اسم المنتج باللغة العربية غير صالح",
+    "Products:InvalidProductNameEn": "اسم المنتج بالغة الانجليزية غير صالح",
+    "Products:InvalidProductDescriptionAr": "وصف المنتج باللغة العربية غير صالح",
+    "Products:InvalidProductDescriptionEn": "وصف المنتج باللغة الانجليزية غير صالح",
+    "Products:InvalidProductCategory": "تصنيف المنتج غير صالح"
+
   }
 }
