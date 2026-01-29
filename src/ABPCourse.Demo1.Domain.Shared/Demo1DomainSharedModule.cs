@@ -46,6 +46,12 @@ public class Demo1DomainSharedModule : AbpModule
                 .Add<Demo1Resource>("en")
                 .AddBaseTypes(typeof(AbpValidationResource))
                 .AddVirtualJson("/Localization/Demo1");
+            
+            //تسجيل ملف الترجمة الخاص بالمنتجات 
+            options.Resources
+                .Add<ProductsResource>("en")
+                .AddBaseTypes(typeof(AbpValidationResource))
+                .AddVirtualJson("/Localization/Products");
 
             options.DefaultResourceType = typeof(Demo1Resource);
         });

@@ -1,0 +1,10 @@
+{
+  "culture": "ar",
+  "texts": {
+    "Demo1.Products": "المنتجات",
+    "Permission:Products:CreateEditProduct": "اضافة وتعديل منتج",
+    "Permission:Products:DeleteProduct": "حذف منتج",
+    "Permission:Products:GetProduct": "عرض منتج",
+    "Permission:Products:ListProduct": "عرض المنتجات"
+  }
+}
